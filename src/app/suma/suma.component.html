@@ -1,0 +1,15 @@
+
+<div>
+    <!-- esta es la forma de hacer con event binding -->
+    <input id='input1' type="text" (input)= 'asignarNumero1($event)' [value]="valor1">
+    <input id='input2' type="text" (input)= 'asignarNumero2($event)' value= "{{ valor2 }}">
+    <!-- esta es la forma de hacer con 2 way data binding antes importando la libreria formsModule -->
+    <input class="form-control" [(ngModel)] ='valor1'>
+    <input class="form-control" [(ngModel)] ='valor2'>
+    <!-- funciona como 2 ways porque tambien modifica las etiquetas que hacen uso de esta -->
+    <button (click)="Sumar()"> Resultado</button>
+
+    <h2>{{ resultadoSuma }} </h2>
+
+</div>
+
